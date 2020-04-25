@@ -1,3 +1,9 @@
+项目python的版本  3.7.4
+
+django的版本 2.2
+
+
+
 git的使用方法
 
 github 本地仓库搭建
