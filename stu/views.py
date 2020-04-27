@@ -12,7 +12,7 @@ def index_view(request):
 def login_view(request):
     #接收请求参数  请求是get 写GET方式 post 就写大写的 POST 这样去获取输入的值
     if request.method == 'GET':
-        return render(request, 'login.html')
+        return render(request, 'login_new.html')
     else:
         #获取请求参数
         uname = request.POST.get('uname')
