@@ -24,10 +24,10 @@ def index_register(request):
     if m == 'GET':
         return render(request, 'register.html')
     else:
-        uname = request.POST.get('uname', '')
-        pwd = request.POST.get('pwd', '')
+        uname = request.POST.get('uname')
+        pwd = request.POST.get('pwd')
         if uname and pwd:
-            #创建模型对象
+            #创建模型对象 获取输入的用户名 密码  存到数据库
             stu_register = Student(sname=uname, spwd=pwd)
             stu_register.save()
 
