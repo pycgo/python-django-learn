@@ -34,3 +34,9 @@ def index_register(request):
             return HttpResponse("注册成功")
         else:
             return HttpResponse("注册失败")
+
+
+def show_view(request):
+    #查询stu_student表中的数据
+    query_data = Student.objects.all()
+    return render(request,'show.html',{'student_data':query_data})
