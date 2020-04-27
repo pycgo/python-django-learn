@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 
 
@@ -24,4 +24,13 @@ def index_register(request):
     if m == 'GET':
         return render(request, 'register.html')
     else:
-        return HttpResponse(m)
+        uname = request.POST.get('uname', '')
+        pwd = request.POST.get('pwd', '')
+        if uname and pwd:
+            #创建模型对象
+            stu_register = Student(sname=uname, spwd=pwd)
+            stu_register.save()
+
+            return HttpResponse("注册成功")
+        else:
+            return HttpResponse("注册失败")

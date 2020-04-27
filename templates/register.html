@@ -8,13 +8,13 @@
     <form action="/register/" method="post">
         {% csrf_token %}
         <p>
-            <label>用户名：</label><input type="text" name='uname'>
+            <label for="ua">用户名：</label><input type="text" name='uname' id="ua">
         </p>
         <p>
-            <label>密码：</label><input type="password" name='pwd'>
+            <label for="pd">密&emsp;码：</label><input type="password" name='pwd' id="pd">
         </p>
         <p>
-            <input type="submit" value="注册">
+           &emsp;&emsp;&emsp;&emsp;<input type="submit" value="注册">
         </p>
 
     </form>
