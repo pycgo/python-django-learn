@@ -11,11 +11,22 @@ def index_view(request):
 
 def login_view(request):
     #接收请求参数  请求是get 写GET方式 post 就写大写的 POST 这样去获取输入的值
-    uname = request.POST.get('uname')
-    pwd = request.POST.get('pwd')
-    if uname == 'user01' and pwd == '123456':
-        return HttpResponse("登录成功！")
-    return HttpResponse("登录失败！！！")
+    if request.method == 'GET':
+        return render(request, 'login.html')
+    else:
+        #获取请求参数
+        uname = request.POST.get('uname')
+        pwd = request.POST.get('pwd')
+
+        #查询数据库
+        if uname and pwd:
+            c = Student.objects.filter(sname = uname, spwd = pwd).count()
+
+        #是否登录成功
+        if c == 1:
+            return HttpResponse("登录成功")
+        return HttpResponse("登录失败")
+
 
 
 def index_register(request):
