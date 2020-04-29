@@ -18,4 +18,15 @@ TEMPLATES = [
 ]
 
 
-network选项里面的ssh.exe为git的  在usr/bin下
+3、network选项里面的ssh.exe为git的  在usr/bin下
+
+
+
+
+
+
+
+4、                     mysqld --install   
+
+    用cmd在管理员窗口 bin下  先添加mysql服务  mysqld --install
+	然后在启动mysql   mysqld --install
