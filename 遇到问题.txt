@@ -1,4 +1,4 @@
-1、django.template.exceptions.TemplateDoesNotExist: login.html
+﻿1、django.template.exceptions.TemplateDoesNotExist: login.html
 
 2、默认放模板htmk的目录  要手动加一下  os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
@@ -18,3 +18,4 @@ TEMPLATES = [
 ]
 
 
+network选项里面的ssh.exe为git的  在usr/bin下
